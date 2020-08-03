@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import Tagsrecord from '@/store/modules/tagsrecord/index'
+import userInfo from '@/store/modules/userInfo/index'
 Vue.use(Vuex)
 export default new Vuex.Store({
   modules: {
-    Tagsrecord: Tagsrecord
+    userInfo: userInfo
   }
 })

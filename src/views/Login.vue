@@ -51,6 +51,7 @@
 <script>
 import headTop from '@/components/Headtop'
 import alertTip from '@/components/Alerttip'
+import { mapMutations } from 'vuex'
 export default {
   data () {
     return {
@@ -82,6 +83,7 @@ export default {
     }
   },
   methods: {
+    ...mapMutations('userInfo', ['RECORD_USERINFO']),
     changeLoginWay () {
       if (this.loginWay === 1) {
         this.loginWay = 2
@@ -92,13 +94,16 @@ export default {
     async Login () {
       let data = {
         name: 'luguofei',
-        pass: 'wpwpwpw'
+        pass: 'wpwpwpw',
+        userId: '1234567890'
       }
       console.log('0000')
       let res = await this.$MyAxios.loginPage.login(data)
       console.log(1111)
       console.log(res)
       console.log(2222)
+      this.RECORD_USERINFO(data)
+      this.$router.go(-1)
     },
     getVerifyCode () {
       this.computedTime = 30

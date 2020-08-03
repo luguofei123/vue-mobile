@@ -24,13 +24,16 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   data () {
     return {
-      userInfo: false
     }
   },
-  props: ['signinUp', 'headTitle', 'goBack']
+  props: ['signinUp', 'headTitle', 'goBack'],
+  computed: {
+    ...mapState('userInfo', ['userInfo'])
+  }
 }
 </script>
 

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from '@/router/router'
-// import store from '@/store'
+import store from '@/store'
 import './config/rem'
 import FastClick from 'fastclick'
 import MyAxios from '@/service'
@@ -15,5 +15,6 @@ if ('addEventListener' in document) {
 }
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
