@@ -187,7 +187,7 @@ export default {
                 }
                 .change_img{
                     display: flex;
-                    flex-direction: 'column';
+                    flex-direction: column;
                     flex-wrap: wrap;
                     width: 2rem;
                     justify-content: center;
