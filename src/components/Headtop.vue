@@ -33,6 +33,9 @@ export default {
   props: ['signinUp', 'headTitle', 'goBack'],
   computed: {
     ...mapState('userInfo', ['userInfo'])
+  },
+  created () {
+    console.log(this.signinUp)
   }
 }
 </script>
